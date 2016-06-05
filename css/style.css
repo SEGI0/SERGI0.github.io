@@ -12,7 +12,7 @@ body {
 	line-height: 1.5em; 
 	background-color: #0c2436;
 	background-image: url(../images/tooplate_wrapper.jpg);
-	background-repeat: repeat-x;
+	background-repeat: no-repeat;
 	background-position: top center;
 }
 
@@ -34,7 +34,11 @@ a:hover {
 	color: #399;
 }
 
-p { margin: 0 0 10px 0; padding: 0; }
+p { 
+	margin: 0 0 10px 0;
+	padding: 0; 
+	
+}
 img { border: none; }
 blockquote { font-style: italic; margin: 0 0 0 10px;}
 cite { font-weight: bold; color:#375c06; }
@@ -43,7 +47,7 @@ em { color: #000; font-weight: 400 }
 
 h1, h2, h3, h4, h5, h6 { color: #000; font-weight: normal;  }
 h1 { font-size: 34px; margin: 0 0 20px; padding: 5px 0 }
-h2 { font-size: 28px; margin: 0 0 20px; padding: 5px 0 10px 0; color: #fff }
+h2 { font-size: 28px; /*! margin: 5px 0 20px; */ padding: 10px 0 10px 0; color: #fff; }
 h3 { font-size: 20px; margin: 0 0 15px; padding: 0; }
 h4 { font-size: 18px; margin: 0 0 15px; padding: 0; }
 h5 { font-size: 16px; margin: 0 0 10px; padding: 0;  }
@@ -51,12 +55,22 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
 
 #image_wrapper { 
-	display: inline-block; 
+	display: block; 
 	border: 1px solid #ccc; 
 	padding: 4px; 
 	background: #fff; 
 	float: left; 
-	margin: 3px 20px 0 0; 
+	margin: 1px 35px 0 0; 
+	
+}
+
+#text { 
+	display: inline-block; 
+	width: 420px;
+	float: left; 
+	/*! margin: 3px 20px 0 0; */ 
+	padding: 4px; 
+	text-align: justify;
 }
 
 
@@ -69,13 +83,13 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 #tooplate_wrapper {
 	width: 800px;
 	margin: 0 auto;
-	background:  url(../images/tooplate_body.jpg) center top no-repeat;
+	/*! background:  url(../images/tooplate_body.jpg) center top no-repeat; */
 }
 
 #tooplate_header {
 	width: 750px;
-	height: 50px;
-	padding: 40px 20px 10px;
+	/*! height: 50px; */
+	/*! padding: 40px 20px 10px; */
 }
 
 #site_title { 
@@ -96,14 +110,15 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 	font-size: 30px; 
 	font-weight: 400; 
 	outline: none; 
-	text-indent: 10px;
+	text-indent: 20px;
 	text-decoration: none; 
-	margin-top: 20px;
+	margin-top: 15px;
+	text-shadow: 2px 2px 1px #16166d;
 }
 
 #site_title h1 a:hover { 
 	color: #03005d;
-	
+	text-shadow: 2px 2px 1px #fff;
 	
 }
 /* menu */
@@ -156,17 +171,31 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 }
 
 #content_title { 
-	width: 700px; 
-	height: 30px; 
-	padding: 15px 50px;  
-	background: url(../images/tooplate_ct.png); 
+	width: 100%; 
+	height: 40px; 
+	text-align: center;  
+	background: #00ba00; /*url(../images/tooplate_ct.png); */
+	text-shadow: 2px 2px 1px #09240a;
+	box-shadow: 7px 7px 3px #2828c7;
+	border-radius: 5px 5px 0 0 ;
+	
 }
 
 #content { 
-	padding: 30px 50px; 
-	background: url(../images/tooplate_content.png) repeat-y; 
-	height: 300px;
-	font-size: 15px;
+	padding: 50px 30px;
+	background: #ccc;
+	/*! background: url(../images/tooplate_content.png) repeat-y; */ 
+	 height: 400px;
+	font-size: 16px;
+	text-align: center;
+	box-shadow: 7px 7px 3px #2828c7;
+	border-radius: 0 0 5px 5px;
+	
+}
+
+#content h3 {
+	text-align: center; 
+	padding-top: 30px;
 }
 
 .content_bottom { 
@@ -174,6 +203,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 	height: 49px; 
 	padding-top: 20px;  
 }
+
 
 .content_cbf { 
 	background: url(../images/tooplate_gototop_bgl.png); 
@@ -232,6 +262,34 @@ a.gototop:hover {
 	margin-bottom: 0; 
 	padding-bottom: 0; 
 }
+
+/** построение ДВЕ КОЛОНКИ ТЕКСТА **/
+
+.colleft {
+	float: left;
+	width: 50%;
+	
+}
+
+.colleft input {
+box-shadow: 3px 3px 1px rgba(0,0,0,.6);
+}
+
+.colright input {
+box-shadow: 3px 3px 1px rgba(0,0,0,.6);
+}
+
+.colright {
+	float: right;
+	width: 50%;
+	
+}
+
+
+
+
+/** ************ **/
+
 
 #gallery { 
 	margin: 0; 
